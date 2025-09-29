@@ -64,67 +64,8 @@ Aplikasi web sistem perkuliahan yang dibangun menggunakan PHP dengan arsitektur 
    - Pastikan PHP dan MySQL sudah terinstall
    - Jalankan aplikasi melalui web server (Apache/Nginx) atau PHP built-in server
 
-## Struktur Aplikasi
-
-\`\`\`
-perkuliahan-app/
-├── config/
-│   ├── config.php          # Konfigurasi aplikasi
-│   └── database.php        # Koneksi database
-├── controllers/
-│   ├── BaseController.php  # Controller dasar
-│   ├── DashboardController.php
-│   ├── MhsController.php
-│   ├── DosenController.php
-│   ├── MatakuliahController.php
-│   └── KuliahController.php
-├── models/
-│   ├── BaseModel.php       # Model dasar
-│   ├── Mhs.php
-│   ├── Dosen.php
-│   ├── MataKuliah.php
-│   └── Kuliah.php
-├── views/
-│   ├── layouts/
-│   │   ├── header.php
-│   │   ├── sidebar.php
-│   │   └── footer.php
-│   ├── dashboard/
-│   ├── mhs/
-│   ├── dosen/
-│   ├── matakuliah/
-│   └── kuliah/
-├── assets/
-│   └── css/
-│       └── style.css       # Styling dengan font Poppins
-├── database/
-│   ├── migration.sql       # Script pembuatan database
-│   └── seeder.sql         # Data sample
-└── index.php              # Entry point aplikasi
-\`\`\`
-
-## Fitur Keamanan
-
-- Input validation pada semua form
-- Prepared statements untuk mencegah SQL injection
-- HTML escaping untuk mencegah XSS
-- Foreign key constraints untuk integritas data
-
-## Desain UI/UX
-
-- Font: Poppins dari Google Fonts
-- Warna utama: #94C2DA (biru muda), #E7A0CC (pink muda), #EFE8E0 (krem)
-- Layout responsive dengan sidebar navigasi
-- Tanpa gradasi warna sesuai permintaan
-- Footer informatif
-
 ## Cara Penggunaan
-
 1. **Dashboard**: Melihat statistik dan navigasi utama
 2. **Master Data**: Kelola data mahasiswa, dosen, dan mata kuliah
 3. **Data Kuliah**: Input dan kelola nilai mahasiswa per mata kuliah
 4. **Validasi**: Sistem akan memvalidasi input dan menampilkan pesan error jika ada kesalahan
-
-## Kontributor
-
-Aplikasi ini dibuat sebagai implementasi sistem perkuliahan dengan arsitektur MVC menggunakan PHP native.
