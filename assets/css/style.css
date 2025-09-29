@@ -1,0 +1,538 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #fceec9 0%, #f5e6b8 100%);
+  color: #0f172a;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Enhanced layout with better spacing and modern design */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Improved sidebar with modern gradient and better typography */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, #e4281f 0%, #d12017 100%);
+  padding: 0;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 4px 0 24px rgba(228, 40, 31, 0.15);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header {
+  padding: 28px 24px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-header h2 {
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 12px 16px;
+}
+
+.sidebar-menu li {
+  margin-bottom: 6px;
+}
+
+/* Enhanced menu items with better hover effects and icons */
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-menu a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(180deg, #ffbe54, #f5a623);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transform: translateX(4px);
+}
+
+.sidebar-menu a:hover::before {
+  transform: scaleY(1);
+}
+
+.sidebar-menu a.active {
+  background: rgba(255, 190, 84, 0.2);
+  color: #ffbe54;
+  font-weight: 600;
+}
+
+.sidebar-menu a.active::before {
+  transform: scaleY(1);
+}
+
+/* Enhanced main content area with better spacing */
+.main-content {
+  flex: 1;
+  margin-left: 280px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fceec9 0%, #f5e6b8 100%);
+}
+
+.content {
+  flex: 1;
+  padding: 28px 32px;
+}
+
+/* Modern page header with subtle shadow and better typography */
+.page-header {
+  background: white;
+  padding: 32px 36px;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(228, 40, 31, 0.08), 0 1px 2px rgba(228, 40, 31, 0.04);
+  margin-bottom: 28px;
+  border: 1px solid rgba(255, 190, 84, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #e4281f, #ffbe54);
+}
+
+.page-header h1 {
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+  letter-spacing: -0.03em;
+}
+
+.page-header p {
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Enhanced cards with better shadows and hover effects */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: 0 1px 3px rgba(228, 40, 31, 0.08), 0 1px 2px rgba(228, 40, 31, 0.04);
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 190, 84, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  box-shadow: 0 8px 25px rgba(228, 40, 31, 0.15), 0 4px 10px rgba(228, 40, 31, 0.08);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  border-bottom: 1px solid rgba(255, 190, 84, 0.2);
+  padding-bottom: 18px;
+  margin-bottom: 24px;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+/* Improved stats grid with better responsive design */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+/* Enhanced stat cards with gradient accents and animations */
+.stat-card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 1px 3px rgba(228, 40, 31, 0.08), 0 1px 2px rgba(228, 40, 31, 0.04);
+  text-align: center;
+  border: 1px solid rgba(255, 190, 84, 0.15);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffbe54, #f5a623);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.stat-card.secondary::before {
+  background: linear-gradient(90deg, #e4281f, #d12017);
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(228, 40, 31, 0.15), 0 8px 16px rgba(228, 40, 31, 0.08);
+}
+
+.stat-card:hover::before {
+  transform: scaleX(1);
+}
+
+.stat-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffbe54, #f5a623);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-card.secondary .stat-number {
+  background: linear-gradient(135deg, #e4281f, #d12017);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* Enhanced buttons with better gradients and hover effects */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: -0.01em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ffbe54, #f5a623);
+  color: #0f172a;
+  box-shadow: 0 4px 14px rgba(255, 190, 84, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #f5a623, #e6951f);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 190, 84, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #e4281f, #d12017);
+  color: white;
+  box-shadow: 0 4px 14px rgba(228, 40, 31, 0.3);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #d12017, #b91c1c);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(228, 40, 31, 0.4);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.25);
+}
+
+.btn-danger:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.35);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
+/* Enhanced table design with better spacing and hover effects */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(228, 40, 31, 0.08), 0 1px 2px rgba(228, 40, 31, 0.04);
+  border: 1px solid rgba(255, 190, 84, 0.15);
+}
+
+.table th,
+.table td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 190, 84, 0.1);
+}
+
+.table th {
+  background: linear-gradient(135deg, #fceec9, #f5e6b8);
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background: linear-gradient(135deg, #fceec9, #f5e6b8);
+  transform: scale(1.001);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Enhanced form controls with better focus states */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.9rem;
+  letter-spacing: -0.01em;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 190, 84, 0.3);
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: white;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #ffbe54;
+  box-shadow: 0 0 0 3px rgba(255, 190, 84, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Enhanced footer with gradient background */
+.footer {
+  background: linear-gradient(135deg, #e4281f, #d12017);
+  color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 24px;
+  margin-top: auto;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+.mb-3 {
+  margin-bottom: 1rem;
+}
+.mt-3 {
+  margin-top: 1rem;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+
+/* Improved responsive design with better mobile experience */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 280px;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .content {
+    padding: 20px 16px;
+  }
+
+  .page-header {
+    padding: 24px 20px;
+    margin-bottom: 20px;
+  }
+
+  .page-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .stat-number {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .content {
+    padding: 16px 12px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .table th,
+  .table td {
+    padding: 12px 8px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Added smooth scrolling and better focus indicators */
+html {
+  scroll-behavior: smooth;
+}
+
+*:focus {
+  outline: 2px solid #ffbe54;
+  outline-offset: 2px;
+}
+
+/* Added loading animation for better UX */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card,
+.stat-card {
+  animation: fadeIn 0.6s ease-out;
+}
